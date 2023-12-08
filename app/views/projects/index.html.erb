@@ -1,0 +1,13 @@
+<div class="container mt-3">
+  <% @projects.each do |project| %>
+    <%= link_to project_path(project), class: "card-link" do %>
+      <div class="card-project">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-project-infos">
+          <h2><%= project.name %></h2>
+          <p>End goal: <strong><%= project.end_goal %></strong></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
